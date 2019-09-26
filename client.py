@@ -1,9 +1,11 @@
 import requests
+from config import scanner_id
 
-scanner_id = 1
 
-def send(barcode):
-  r = requests.post('https://scancash.herokuapp.com/scanners/record', data = {
-    'scanner_id': scanner_id,
-    'record': barcode,
-  })
+def send_barcode(barcode):
+    r = requests.post(
+        'https://scancash.herokuapp.com/scanners/record',
+        data={
+            'scanner_id': scanner_id,
+            'record': barcode,
+        })

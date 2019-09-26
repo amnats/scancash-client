@@ -1,3 +1,5 @@
 {
-  "python.pythonPath": "C:\\Users\\mnatsakanayan\\.virtualenvs\\scancash-client-NDb_Wvs1\\Scripts\\python.exe"
+  "python.pythonPath": "C:\\Users\\mnatsakanayan\\.virtualenvs\\scancash-client-NDb_Wvs1\\Scripts\\python.exe",
+  "python.linting.pep8Enabled": true,
+  "python.linting.enabled": true
 }
