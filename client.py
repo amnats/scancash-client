@@ -5,6 +5,7 @@ from config import scanner_id
 def send_barcode(barcode):
     print('before', barcode)
     barcode = barcode.strip().replace('^[[B', '')
+    barcode = ''.join(c for c in barcode if c.isprintable())
     print('after', barcode)
     print(len(barcode))
     r = requests.post(
