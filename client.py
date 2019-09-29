@@ -3,8 +3,8 @@ from config import scanner_id
 
 
 def send_barcode(barcode):
+    barcode = barcode.replace('^[[B', '')
     print(barcode)
-    barcode.replace('^[[B', '')
     r = requests.post(
         'https://scancash.herokuapp.com/scanners/record',
         data={
