@@ -10,5 +10,5 @@ def send_barcode(barcode):
         'https://scancash.herokuapp.com/scanners/record',
         json={
             'scanner_id': scanner_id,
-            'record': barcode,
+            'record': barcode.strip().replace('^[[B', ''),
         })
