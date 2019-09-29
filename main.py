@@ -1,5 +1,5 @@
-import client
+from client import *
 
 while True:
     r = input()
-    print(r)
+    send_barcode(r)
