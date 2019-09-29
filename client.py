@@ -10,7 +10,7 @@ def send_barcode(barcode):
         barcode = barcode.replace('[B', '')
         print('after', barcode)
         print(len(barcode))
-    except TypeError:
+    except AttributeError:
         pass
 
     r = requests.post(
