@@ -6,6 +6,7 @@ def send_barcode(barcode):
     print('before', barcode)
     barcode = barcode.strip().replace('^[[B', '')
     barcode = ''.join(c for c in barcode if c.isprintable())
+    barcode = barcode.replace('[B', '')
     print('after', barcode)
     print(len(barcode))
     r = requests.post(
